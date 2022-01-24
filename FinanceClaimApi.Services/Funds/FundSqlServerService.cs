@@ -21,8 +21,15 @@ namespace FinanceClaim.Services.Funds
         }
         public void AddFund()
         {
+            var fund= new Fund();
+            _context.Funds.Add(fund);
             _context.SaveChanges();
         }
-        
+
+        public void DeleteFund(int id)
+        {
+            _context.Funds.RemoveRange();
+            
+        }
     }
 }

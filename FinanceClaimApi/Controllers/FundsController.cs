@@ -14,7 +14,7 @@ namespace FinanceClaimApi.Controllers
         public FundsController(IFundRepository service)
         {
             _service = service;
-        } 
+        }
 
         [HttpGet]
         public IActionResult GetFunds()
@@ -40,5 +40,12 @@ namespace FinanceClaimApi.Controllers
             _service.AddFund();
             return Ok("Success");
         }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteFund(int id)
+        {
+            _service.DeleteFund(id);
+            return Ok();
+        }
     }
+    
 }

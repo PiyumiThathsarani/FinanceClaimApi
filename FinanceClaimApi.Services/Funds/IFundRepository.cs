@@ -12,6 +12,7 @@ namespace FinanceClaim.Services.Funds
         public List<Fund> GetAllFunds();
         public Fund GetFund(int id);
         public void AddFund();
+        public void DeleteFund(int id);
 
     }
 }

@@ -1,22 +1,14 @@
-﻿using FinanceClaimApi.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceClaim.Models
+namespace FinanceClaimApi.Models
 {
-    public class Fund
+    public class GNDivision
     {
         public int Id { get; set; }
-        [Required]
-        public string Name { get; set; }
-        public decimal FundAmount { get; set; }
-        public string ImagePath { get; set; } 
-        public string Description { get; set; }
-        public DateTime DueDate { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean IsDeleted { get; set; }
         public string DeletedBy { get; set; }
@@ -26,7 +18,14 @@ namespace FinanceClaim.Models
         public DateTime CreatedOn { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime LastModifiedOn { get; set; }
+        public string Name { get; set; }
+        public string GNDivisionNo { get; set; }
+        public DivisionalSecretariatDiv DivisionalSecretariat { get; set; }
 
-        public ICollection<FundRequest> FundRequests { get; set; }
+        public ICollection<User> Users { get; set; }
+        
+        
+        
+        
     }
 }

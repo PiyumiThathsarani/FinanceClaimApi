@@ -4,6 +4,7 @@ using FinanceClaim.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinanceClaimApi.DataAccess.Migrations
 {
     [DbContext(typeof(FundDbContext))]
-    partial class FundDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220122143810_TableRelationsModified")]
+    partial class TableRelationsModified
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -293,7 +295,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("FundRequests");
+                    b.ToTable("FundRequest");
                 });
 
             modelBuilder.Entity("FinanceClaimApi.Models.GNDivision", b =>
@@ -367,7 +369,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Provinces");
+                    b.ToTable("Province");
                 });
 
             modelBuilder.Entity("FinanceClaimApi.Models.Role", b =>
@@ -415,7 +417,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Role");
                 });
 
             modelBuilder.Entity("FinanceClaimApi.Models.User", b =>
@@ -507,7 +509,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         .IsRequired();
 
                     b.HasOne("FinanceClaimApi.Models.FundRequest", "FundRequest")
-                        .WithMany("ApprovalFlows")
+                        .WithMany("approvalFlows")
                         .HasForeignKey("FundRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -583,7 +585,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
             modelBuilder.Entity("FinanceClaimApi.Models.UserRole", b =>
                 {
                     b.HasOne("FinanceClaimApi.Models.Role", "Role")
-                        .WithMany("UserRoles")
+                        .WithMany("userRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -621,7 +623,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
 
             modelBuilder.Entity("FinanceClaimApi.Models.FundRequest", b =>
                 {
-                    b.Navigation("ApprovalFlows");
+                    b.Navigation("approvalFlows");
                 });
 
             modelBuilder.Entity("FinanceClaimApi.Models.GNDivision", b =>
@@ -636,7 +638,7 @@ namespace FinanceClaimApi.DataAccess.Migrations
 
             modelBuilder.Entity("FinanceClaimApi.Models.Role", b =>
                 {
-                    b.Navigation("UserRoles");
+                    b.Navigation("userRoles");
                 });
 
             modelBuilder.Entity("FinanceClaimApi.Models.User", b =>
