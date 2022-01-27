@@ -1,4 +1,7 @@
-﻿using FinanceClaim.Services.Funds;
+﻿using AutoMapper;
+using FinanceClaim.Models;
+using FinanceClaim.Services.Funds;
+using FinanceClaimApi.Services.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections;
@@ -10,19 +13,22 @@ namespace FinanceClaimApi.Controllers
     public class FundsController : ControllerBase
     {
         private readonly IFundRepository _service;
+        private readonly IMapper _mapper;
 
-        public FundsController(IFundRepository service)
+        public FundsController(IFundRepository service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;   
         }
 
         [HttpGet]
-        public IActionResult GetFunds()
+        public ActionResult<ICollection<Fund>> GetFunds()
         {
             var funds = _service.GetAllFunds();
-            return Ok(funds);
+            var mappedFunds = _mapper.Map<ICollection<Fund>>(funds);
+            return Ok(mappedFunds);
         }
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name ="GetFund")]
         public IActionResult GetFund(int id)
         {
             var fund = _service.GetFund(id);
@@ -31,21 +37,46 @@ namespace FinanceClaimApi.Controllers
             {
                 return NotFound();
             }
-            return Ok(fund);
+            var mappedFund = _mapper.Map<Fund>(fund);
+            return Ok(mappedFund);
         }
-
         [HttpPost]
-        public IActionResult NewFund()
+
+        public ActionResult<FundDto> CreateFund(CreateFundDto fund)
         {
-            _service.AddFund();
-            return Ok("Success");
+            var fundEntitiy = _mapper.Map<Fund>(fund);
+            var newFund = _service.AddFund(fundEntitiy);
+
+            var fundForReturn = _mapper.Map<FundDto>(newFund);
+            return CreatedAtRoute("GetFund", new { id = fundForReturn.Id },
+                value:fundForReturn);
+           
         }
-        [HttpDelete("{id}")]
-        public IActionResult DeleteFund(int id)
+        [HttpPut("{fundId}")]
+        public ActionResult UpdateFund(int fundId,UpdateFundDto fund)
         {
-            _service.DeleteFund(id);
-            return Ok();
+            var updatingFund = _service.GetFund(fundId);
+            if (updatingFund is null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(fund,updatingFund);
+            _service.UpdateFund(updatingFund);
+            return NoContent();
         }
+        [HttpDelete("{fundId}")]
+
+        public ActionResult DeleteFund(int fundId)
+        {
+            var deletingFund = _service.GetFund(fundId);
+            if (deletingFund is null)
+            {
+                return NotFound();
+            }
+            _service.DeleteFund(deletingFund);
+            return NoContent();
+        }
+       
     }
     
 }

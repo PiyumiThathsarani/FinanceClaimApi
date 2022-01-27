@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceClaimApi.Models
+namespace FinanceClaimApi.Services.ViewModels
 {
-    public class ApprovalFlow
+    public class UpdateFundDto
     {
-        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal FundAmount { get; set; }
+        public string ImagePath { get; set; }
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean IsDeleted { get; set; }
         public string DeletedBy { get; set; }
@@ -18,9 +22,5 @@ namespace FinanceClaimApi.Models
         public DateTime CreatedOn { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime LastModifiedOn { get; set; }
-        public FundRequest FundRequest { get; set; }
-        public FundApprovalFlow FundApprovalFlow { get; set; }
-        public DateTime FlowDate { get; set; }
-        
     }
 }

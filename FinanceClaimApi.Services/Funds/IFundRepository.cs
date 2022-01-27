@@ -11,8 +11,9 @@ namespace FinanceClaim.Services.Funds
     {
         public List<Fund> GetAllFunds();
         public Fund GetFund(int id);
-        public void AddFund();
-        public void DeleteFund(int id);
+        public Fund AddFund(Fund fund);
+        public void UpdateFund(Fund fund);
+        public void DeleteFund(Fund fund);
 
     }
 }
