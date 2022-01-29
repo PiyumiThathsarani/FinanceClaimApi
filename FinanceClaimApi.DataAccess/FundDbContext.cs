@@ -13,6 +13,7 @@ namespace FinanceClaimApi.DataAccess
         public DbSet<Fund> Funds { get; set; }
         public DbSet<FundRequest> FundRequests {get; set;}
         public DbSet<FundApprovalFlow> FundApprovalFlows { get;set; }
+        public DbSet<ApprovalFlow> ApprovalFlows { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<GNDivision> GNDivisions { get; set; }

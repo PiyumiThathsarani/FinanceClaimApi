@@ -1,3 +1,4 @@
+using FinanceClaimApi.Services.ApprovalFlows;
 using FinanceClaimApi.Services.Funds;
 using FinanceClaimApi.Services.Requests;
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IFundRepository, FundSqlServerService>();
 builder.Services.AddScoped<IRequestRepository, RequestSqlServerService>();
+builder.Services.AddScoped<IApprovalFlowRepository, ApprovalFlowSqlServerService>();
 
 var app = builder.Build();
 
