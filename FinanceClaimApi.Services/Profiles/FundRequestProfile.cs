@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 
 namespace FinanceClaimApi.Services.Profiles
 {
-    public class FundProfile:Profile
+    public class FundRequestProfile:Profile
     {
-        public FundProfile()
+        public FundRequestProfile()
         {
-            CreateMap<Fund,FundDto>();
-            CreateMap<CreateFundDto, Fund>();
-            CreateMap<UpdateFundDto, Fund>();
+            CreateMap< FundRequest,FundRequestDto>();
+            CreateMap<CreateFundRequestDto,FundRequest>();
         }
     }
 }

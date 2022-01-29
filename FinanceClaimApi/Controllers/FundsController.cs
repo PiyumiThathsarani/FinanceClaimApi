@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using FinanceClaim.Models;
-using FinanceClaim.Services.Funds;
+using FinanceClaimApi.Services.Funds;
+using FinanceClaimApi.Models;
 using FinanceClaimApi.Services.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

@@ -9,19 +9,9 @@ namespace FinanceClaimApi.Models
     public class FundApprovalFlow
     {
         public int Id { get; set; }
-        public Boolean IsActive { get; set; }
-        public Boolean IsDeleted { get; set; }
-        public string DeletedBy { get; set; }
-        public DateTime DeletedOn { get; set; }
-        public string DeletedRemark { get; set; }
-        public string CreatedBy { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public string LastModifiedBy { get; set; }
-        public DateTime LastModifiedOn { get; set; }
-        public Boolean IsReviewed { get; set; }
-        public Boolean IsApproved { get; set; }
+        public string FlowName { get; set; }
         public string Description { get; set; }
 
-        public ICollection<ApprovalFlow> ApprovalFlows { get; set; }
+        public ICollection<ApprovalFlow> ApprovalFlows { get; set; } = new List<ApprovalFlow>();
     }
 }

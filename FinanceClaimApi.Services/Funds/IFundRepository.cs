@@ -1,11 +1,11 @@
-﻿using FinanceClaim.Models;
+﻿using FinanceClaimApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceClaim.Services.Funds
+namespace FinanceClaimApi.Services.Funds
 {
     public interface IFundRepository
     {

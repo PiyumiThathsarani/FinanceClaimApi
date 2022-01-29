@@ -20,6 +20,6 @@ namespace FinanceClaimApi.Models
         public DateTime LastModifiedOn { get; set; }
         public string RoleType { get; set; }
 
-        public ICollection<UserRole> UserRoles { get; set; }
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
     }
 }

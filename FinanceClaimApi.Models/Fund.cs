@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceClaim.Models
+namespace FinanceClaimApi.Models
 {
     public class Fund
     {
@@ -27,6 +27,6 @@ namespace FinanceClaim.Models
         public string LastModifiedBy { get; set; }
         public DateTime LastModifiedOn { get; set; }
 
-        public ICollection<FundRequest> FundRequests { get; set; }
+        public ICollection<FundRequest> FundRequests { get; set; }= new List<FundRequest>();
     }
 }

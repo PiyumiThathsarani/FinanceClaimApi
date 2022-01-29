@@ -1,12 +1,13 @@
-﻿using System;
+﻿using FinanceClaimApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceClaimApi.Models
+namespace FinanceClaimApi.Services.ViewModels
 {
-    public class FundRequest
+    public class FundRequestDto
     {
         public int Id { get; set; }
         
@@ -14,7 +15,5 @@ namespace FinanceClaimApi.Models
         public Fund Fund { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
-
-        public ICollection<ApprovalFlow> ApprovalFlows { get; set; } = new List<ApprovalFlow>();
     }
 }

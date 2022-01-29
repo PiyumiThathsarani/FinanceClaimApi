@@ -20,10 +20,11 @@ namespace FinanceClaimApi.Models
         public DateTime LastModifiedOn { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
+        public int GNDivisionId { get; set; }
         public GNDivision GNDivision { get; set; }
 
-        public ICollection<FundRequest> Requests { get; set; }
-        public ICollection<UserRole> UserRoles { get; set; }
+        public ICollection<FundRequest> Requests { get; set; } = new List<FundRequest>();
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 
     }
 }

@@ -1,5 +1,5 @@
-using FinanceClaim.Services.Funds;
-//using FinanceClaimApi.Services.Requests;
+using FinanceClaimApi.Services.Funds;
+using FinanceClaimApi.Services.Requests;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IFundRepository, FundSqlServerService>();
-//builder.Services.AddScoped<IRequestRepository, RequestSqlServerService>();
+builder.Services.AddScoped<IRequestRepository, RequestSqlServerService>();
 
 var app = builder.Build();
 

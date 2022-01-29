@@ -1,12 +1,12 @@
-﻿using FinanceClaim.DataAccess;
-using FinanceClaim.Models;
+﻿using FinanceClaimApi.DataAccess;
+using FinanceClaimApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceClaim.Services.Funds
+namespace FinanceClaimApi.Services.Funds
 {
     public class FundSqlServerService : IFundRepository
     {
@@ -35,8 +35,8 @@ namespace FinanceClaim.Services.Funds
         {
             fund.IsDeleted=true;
             fund.DeletedOn=DateTime.Now;
-            fund.DeletedBy = "Sys";
-            fund.DeletedRemark = "Sys Remark";
+            fund.DeletedBy = "System Admin";
+            fund.DeletedRemark = "This fund is no more available or paused";
             _context.SaveChanges();
         }
 
