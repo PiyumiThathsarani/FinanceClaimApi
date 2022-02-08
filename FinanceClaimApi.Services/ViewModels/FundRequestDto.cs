@@ -12,8 +12,8 @@ namespace FinanceClaimApi.Services.ViewModels
         public int Id { get; set; }
         
         public int FundId { get; set; }
-        public Fund Fund { get; set; }
+        
         public int UserId { get; set; }
-        public User User { get; set; }
+        
     }
 }

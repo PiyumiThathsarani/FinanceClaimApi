@@ -12,6 +12,10 @@ namespace FinanceClaimApi.Services.ApprovalFlows
     {
         private readonly FundDbContext _context = new FundDbContext();
 
+        public List<ApprovalFlow> GetAllApprovalFlows()
+        {
+            return _context.ApprovalFlows.ToList();
+        }
         public ApprovalFlow GetApprovalFlow(int id)
         {
             return _context.ApprovalFlows.Find(id);
@@ -24,5 +28,6 @@ namespace FinanceClaimApi.Services.ApprovalFlows
             return _context.ApprovalFlows.Find(approvalFlow.Id);
         }
 
+       
     }
 }

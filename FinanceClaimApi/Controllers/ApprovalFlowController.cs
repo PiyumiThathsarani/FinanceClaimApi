@@ -19,6 +19,14 @@ namespace FinanceClaimApi.Controllers
             _approvalFlowService = approvalFlowService;
             _mapper = mapper;
         }
+        [HttpGet]
+        public ActionResult<ICollection<ApprovalFlow>> GetApprovalFlows()
+        {
+            var approvalFlow = _approvalFlowService.GetAllApprovalFlows();
+            var mappedApprovalFlow = _mapper.Map<ICollection<ApprovalFlow>>(approvalFlow);
+            return Ok(mappedApprovalFlow);
+        }
+
         [HttpGet("{id}",Name ="GetApprovalFlow")]
         public IActionResult GetApprovalFlow(int id)
         {

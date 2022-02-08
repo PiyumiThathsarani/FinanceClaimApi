@@ -11,6 +11,7 @@ namespace FinanceClaimApi.Services.ViewModels
         public Boolean IsCompleted { get; set; }
         public string ApprovedBy { get; set; }
         public DateTime ApprovedOn { get; set; }
+        public string Status { get; set; }
         public string Remarks { get; set; }
 
 

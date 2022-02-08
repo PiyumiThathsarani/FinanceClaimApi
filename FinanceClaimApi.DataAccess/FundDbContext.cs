@@ -143,15 +143,45 @@ namespace FinanceClaimApi.DataAccess
             modelBuilder.Entity<District>().HasData(new District[]
             {
                 new District {Id = 1,Name ="Hambantota",ProvinceId=1},
-                new District {Id = 2,Name ="Kalutara",ProvinceId=2},
-                new District {Id = 3,Name ="Ratnapura",ProvinceId=3}
+                new District {Id = 2,Name ="Matara",ProvinceId=1},
+                new District {Id = 3,Name ="Galle",ProvinceId=1},
+                new District {Id = 4,Name ="Kegalle",ProvinceId=2},
+                new District {Id = 5,Name ="Ratnapura",ProvinceId=2},
+                new District {Id = 6,Name ="Kalutara",ProvinceId=3},
+                new District {Id = 7,Name ="Colombo",ProvinceId=3},
+                new District {Id = 8,Name ="Gampaha",ProvinceId=3},
+                new District {Id = 9,Name ="Badulla",ProvinceId=4},
+                new District {Id = 10,Name ="Monaragala",ProvinceId=4},
+                new District {Id = 11,Name ="Trincomalee",ProvinceId=5},
+                new District {Id = 12,Name ="Batticaloa",ProvinceId=5},
+                new District {Id = 13,Name ="Ampara",ProvinceId=5},
+                new District {Id = 14,Name ="Matale",ProvinceId=6},
+                new District {Id = 15,Name ="Kandy",ProvinceId=6},
+                new District {Id = 16,Name ="Nuwara Eliya",ProvinceId=6},
+                new District {Id = 17,Name ="Anuradhapura",ProvinceId=7},
+                new District {Id = 18,Name ="Polonnaruwa",ProvinceId=7},
+                new District{Id = 19,Name ="Jaffna",ProvinceId=8},
+                new District{Id = 20,Name ="Kilinochchi",ProvinceId=8},
+                new District{Id = 21,Name ="Mannar",ProvinceId=8},
+                new District{Id = 22,Name ="Mullaitivu",ProvinceId=8},
+                new District{Id = 23,Name ="Vavuniya",ProvinceId=8},
+                new District{Id = 24,Name ="Puttalam",ProvinceId=9},
+                new District{Id = 25,Name ="Kurunegala",ProvinceId=9}
+
             }
             );
             modelBuilder.Entity<Province>().HasData(new Province[]
             {
                 new Province {Id = 1,Name ="Southern Province"},
                 new Province {Id = 2,Name ="Sabaragamuwa Province"},
-                new Province {Id = 3,Name ="Western Province"}
+                new Province {Id = 3,Name ="Western Province"},
+                new Province{Id = 4,Name ="Uva Province"},
+                new Province{Id=5,Name ="Eastern Province"},
+                new Province{Id=6,Name ="Central Province"},
+                new Province{Id=7,Name ="North Central province"},
+                new Province{Id=8,Name ="Nothern Province"},
+                new Province{Id=9,Name ="North Western Province"}
+
             }
             );
             modelBuilder.Entity<UserRole>().HasData(new UserRole[]

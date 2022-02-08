@@ -9,6 +9,7 @@ namespace FinanceClaimApi.Services.ApprovalFlows
 {
     public interface IApprovalFlowRepository
     {
+        public List<ApprovalFlow> GetAllApprovalFlows();
         public ApprovalFlow GetApprovalFlow(int id);
         public ApprovalFlow AddApprovalFlow(ApprovalFlow approvalFlow);
 
