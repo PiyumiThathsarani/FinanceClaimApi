@@ -24,7 +24,7 @@ namespace FinanceClaimApi.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = DbNew; Trusted_Connection = True";
+            var connectionString = "Data Source=SQL5107.site4now.net;Initial Catalog=db_a846e5_efinanceclaim;User Id=db_a846e5_efinanceclaim_admin;Password=Pt_30797323";
             
             optionsBuilder.UseSqlServer(connectionString);
         }
