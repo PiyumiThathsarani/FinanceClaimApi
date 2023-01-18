@@ -8,11 +8,9 @@ namespace FinanceClaimApi.Models
 {
     public enum ApprovalStatus
     {
-        InReviewingStage,//0
-        InVerifyingStage,//1
-        InApprovalStage,//2
-        InFundProcessingStage,//3
-        InFundTransferStage,//4
-        FundTransfered//5
+        Pending,//0
+        Approved,//1
+        Rejected,//2
+        
     }
 }

@@ -4,6 +4,7 @@ using FinanceClaimApi.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinanceClaimApi.DataAccess.Migrations
 {
     [DbContext(typeof(FundDbContext))]
-    partial class FundDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220421124210_DataChanged2")]
+    partial class DataChanged2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -466,48 +468,48 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7650),
+                            CreatedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2479),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7649),
+                            DeletedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2470),
                             DeletedRemark = "Not deleted",
                             DivisionalSecretariatDivId = 1,
                             GNDivisionNo = "22E",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7651),
+                            LastModifiedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2479),
                             Name = "Gotabhayapura"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7654),
+                            CreatedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2481),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7653),
+                            DeletedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2481),
                             DeletedRemark = "Not deleted",
                             DivisionalSecretariatDivId = 2,
                             GNDivisionNo = "15A",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7654),
+                            LastModifiedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2482),
                             Name = "Kirinda"
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7656),
+                            CreatedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2483),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7655),
+                            DeletedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2483),
                             DeletedRemark = "Not deleted",
                             DivisionalSecretariatDivId = 3,
                             GNDivisionNo = "17C",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7656),
+                            LastModifiedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2483),
                             Name = "Halmillawa"
                         });
                 });
@@ -628,42 +630,42 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "PT wanniarachchi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7749),
+                            CreatedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2667),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7748),
+                            DeletedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2666),
                             DeletedRemark = "Not yet deleted",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Not yet modified",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7750),
+                            LastModifiedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2667),
                             RoleType = "Admin"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "PT wanniarachchi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7752),
+                            CreatedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2669),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7751),
+                            DeletedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2668),
                             DeletedRemark = "Not yet deleted",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Not yet modified",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7752),
+                            LastModifiedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2669),
                             RoleType = "Village Officer"
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "PT wanniarachchi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7753),
+                            CreatedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2671),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7753),
+                            DeletedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2670),
                             DeletedRemark = "Not yet deleted",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Not yet modified",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7754),
+                            LastModifiedOn = new DateTime(2022, 4, 21, 18, 12, 10, 343, DateTimeKind.Local).AddTicks(2671),
                             RoleType = "User"
                         });
                 });
@@ -675,6 +677,10 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
@@ -714,7 +720,15 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -723,56 +737,6 @@ namespace FinanceClaimApi.DataAccess.Migrations
                     b.HasIndex("GNDivisionId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 2,
-                            CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7555),
-                            DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7547),
-                            DeletedRemark = "Not deleted",
-                            GNDivisionId = 1,
-                            IsActive = true,
-                            IsDeleted = false,
-                            LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7556),
-                            Name = "Piyumi Thathsarani",
-                            Password = "235689"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7560),
-                            DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7559),
-                            DeletedRemark = "Not deleted",
-                            GNDivisionId = 2,
-                            IsActive = true,
-                            IsDeleted = false,
-                            LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7560),
-                            Name = "Thilini Anuradha",
-                            Password = "123456"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7562),
-                            DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7561),
-                            DeletedRemark = "Not deleted",
-                            GNDivisionId = 3,
-                            IsActive = true,
-                            IsDeleted = false,
-                            LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7562),
-                            Name = "Thanuja Mahendran",
-                            Password = "124578"
-                        });
                 });
 
             modelBuilder.Entity("FinanceClaimApi.Models.UserRole", b =>

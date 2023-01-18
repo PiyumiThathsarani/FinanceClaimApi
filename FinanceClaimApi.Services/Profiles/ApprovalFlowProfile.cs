@@ -15,6 +15,8 @@ namespace FinanceClaimApi.Services.Profiles
         {
             CreateMap<ApprovalFlow, ApprovalFlowDto>();
             CreateMap<CreateApprovalFlowDto, ApprovalFlow>();
+            CreateMap<CreateApprovingApprovalFlowDto, ApprovalFlow>();
+
         }
     }
 }

@@ -4,6 +4,7 @@ using FinanceClaimApi.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinanceClaimApi.DataAccess.Migrations
 {
     [DbContext(typeof(FundDbContext))]
-    partial class FundDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220403184247_DataChanged")]
+    partial class DataChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -366,19 +368,37 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 1,
                             Description = "Your application is still in reviewing stage",
-                            FlowName = "Pending"
+                            FlowName = "Reviewing"
                         },
                         new
                         {
                             Id = 2,
+                            Description = "Your application is still in verified!",
+                            FlowName = "Verified"
+                        },
+                        new
+                        {
+                            Id = 3,
                             Description = "Your application is approved!",
                             FlowName = "Approved"
                         },
                         new
                         {
-                            Id = 3,
-                            Description = "Your application is rejected!",
-                            FlowName = "Rejected"
+                            Id = 4,
+                            Description = "Now your fund is in creation",
+                            FlowName = "Fund Creating"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Now your fund to be transfered",
+                            FlowName = "Bank Transfer"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "Your fund is succesfully transfered to your account!",
+                            FlowName = "Transfered"
                         });
                 });
 
@@ -466,48 +486,48 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7650),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4439),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7649),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4438),
                             DeletedRemark = "Not deleted",
                             DivisionalSecretariatDivId = 1,
                             GNDivisionNo = "22E",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7651),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4440),
                             Name = "Gotabhayapura"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7654),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4443),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7653),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4442),
                             DeletedRemark = "Not deleted",
                             DivisionalSecretariatDivId = 2,
                             GNDivisionNo = "15A",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7654),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4443),
                             Name = "Kirinda"
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7656),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4445),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7655),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4444),
                             DeletedRemark = "Not deleted",
                             DivisionalSecretariatDivId = 3,
                             GNDivisionNo = "17C",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7656),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4445),
                             Name = "Halmillawa"
                         });
                 });
@@ -628,42 +648,42 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "PT wanniarachchi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7749),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4554),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7748),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4552),
                             DeletedRemark = "Not yet deleted",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Not yet modified",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7750),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4554),
                             RoleType = "Admin"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "PT wanniarachchi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7752),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4556),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7751),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4555),
                             DeletedRemark = "Not yet deleted",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Not yet modified",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7752),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4557),
                             RoleType = "Village Officer"
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "PT wanniarachchi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7753),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4559),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7753),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4558),
                             DeletedRemark = "Not yet deleted",
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Not yet modified",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7754),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4562),
                             RoleType = "User"
                         });
                 });
@@ -729,15 +749,15 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7555),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4326),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7547),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4314),
                             DeletedRemark = "Not deleted",
                             GNDivisionId = 1,
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7556),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4327),
                             Name = "Piyumi Thathsarani",
                             Password = "235689"
                         },
@@ -745,15 +765,15 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 3,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7560),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4330),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7559),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4329),
                             DeletedRemark = "Not deleted",
                             GNDivisionId = 2,
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7560),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4330),
                             Name = "Thilini Anuradha",
                             Password = "123456"
                         },
@@ -761,15 +781,15 @@ namespace FinanceClaimApi.DataAccess.Migrations
                         {
                             Id = 4,
                             CreatedBy = "Piyumi",
-                            CreatedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7562),
+                            CreatedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4332),
                             DeletedBy = "None",
-                            DeletedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7561),
+                            DeletedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4331),
                             DeletedRemark = "Not deleted",
                             GNDivisionId = 3,
                             IsActive = true,
                             IsDeleted = false,
                             LastModifiedBy = "Piyumi",
-                            LastModifiedOn = new DateTime(2022, 12, 10, 9, 6, 29, 150, DateTimeKind.Local).AddTicks(7562),
+                            LastModifiedOn = new DateTime(2022, 4, 4, 0, 12, 46, 716, DateTimeKind.Local).AddTicks(4332),
                             Name = "Thanuja Mahendran",
                             Password = "124578"
                         });

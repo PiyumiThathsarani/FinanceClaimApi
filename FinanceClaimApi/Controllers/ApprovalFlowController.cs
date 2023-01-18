@@ -50,6 +50,21 @@ namespace FinanceClaimApi.Controllers
                 value: approvalFlowForReturn);
 
         }
+
+
+        [HttpPost]
+        [Route("Approve")]
+        public ActionResult<ApprovalFlowDto> AddApproval(CreateApprovingApprovalFlowDto approval)
+        {
+            var requestapprovalentitiy = _mapper.Map<ApprovalFlow>(approval);
+            var newfundrequestapproval = _approvalFlowService.AddFundRequestApproval(requestapprovalentitiy);
+            var requestapprovalforreturn = _mapper.Map<ApprovalFlowDto>(newfundrequestapproval);
+            return CreatedAtRoute("GetFundRequest", new { id = requestapprovalforreturn.Id },
+                value: requestapprovalforreturn);
+            //return Ok(requestapprovalforreturn);
+
+        }
+
     }
 
 }

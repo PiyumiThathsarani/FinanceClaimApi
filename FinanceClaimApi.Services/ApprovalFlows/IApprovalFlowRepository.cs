@@ -12,6 +12,6 @@ namespace FinanceClaimApi.Services.ApprovalFlows
         public List<ApprovalFlow> GetAllApprovalFlows();
         public ApprovalFlow GetApprovalFlow(int id);
         public ApprovalFlow AddApprovalFlow(ApprovalFlow approvalFlow);
-
+        public ApprovalFlow AddFundRequestApproval(ApprovalFlow approval);
     }
 }

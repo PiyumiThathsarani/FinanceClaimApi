@@ -24,7 +24,7 @@ namespace FinanceClaimApi.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Data Source=SQL5107.site4now.net;Initial Catalog=db_a846e5_efinanceclaim;User Id=db_a846e5_efinanceclaim_admin;Password=Pt_30797323";
+            var connectionString = "Data Source=SQL8003.site4now.net;Initial Catalog=db_a91481_efinanceclaimdb;User Id=db_a91481_efinanceclaimdb_admin;Password=Pt_30797323";
             
             optionsBuilder.UseSqlServer(connectionString);
         }
@@ -46,7 +46,7 @@ namespace FinanceClaimApi.DataAccess
                 LastModifiedOn = DateTime.Now,
                 Name ="Piyumi Thathsarani",
                 Password ="235689",
-                GNDivisionId =1 
+                GNDivisionId =1
                 },
                 new User
                 {
@@ -81,6 +81,7 @@ namespace FinanceClaimApi.DataAccess
                 GNDivisionId =3
                 }
             });
+
             modelBuilder.Entity<GNDivision>().HasData(new GNDivision[]
             {
                 new GNDivision
@@ -241,12 +242,9 @@ namespace FinanceClaimApi.DataAccess
             });
             modelBuilder.Entity<FundApprovalFlow>().HasData(new FundApprovalFlow[]
             {
-                new FundApprovalFlow{Id=1,FlowName="Reviewing",Description="Your application is still in reviewing stage"},
-                new FundApprovalFlow{Id=2,FlowName="Verified",Description="Your application is still in verified!"},
-                new FundApprovalFlow{Id=3,FlowName="Approved",Description="Your application is approved!"},
-                new FundApprovalFlow{Id=4,FlowName="Fund Creating",Description ="Now your fund is in creation"},
-                new FundApprovalFlow{Id=5,FlowName="Bank Transfer",Description="Now your fund to be transfered"},
-                new FundApprovalFlow{Id=6,FlowName="Transfered",Description="Your fund is succesfully transfered to your account!"}
+                new FundApprovalFlow{Id=1,FlowName="Pending",Description="Your application is still in reviewing stage"},
+                new FundApprovalFlow{Id=2,FlowName="Approved",Description="Your application is approved!"},
+                new FundApprovalFlow{Id=3,FlowName="Rejected",Description="Your application is rejected!"}
             });
 
         }

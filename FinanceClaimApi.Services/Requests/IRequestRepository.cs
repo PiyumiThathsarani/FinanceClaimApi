@@ -12,5 +12,7 @@ namespace FinanceClaimApi.Services.Requests
         public List<FundRequest> GetAllFundRequests();
         public FundRequest GetFundRequest(int id);
         public FundRequest AddFundRequest(FundRequest request);
+      
+       
     }
 }
